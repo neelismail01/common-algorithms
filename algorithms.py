@@ -1,22 +1,29 @@
-def quick_sort(arr):
-    length = len(arr)
-    if length <= 1:
-        return arr
-    
-    pivot = arr.pop()
-    items_greater = []
-    items_lower = []
-    items_equal = [pivot]
+def partition(arr, start, end):
+    pivot = arr[start]
+    i = start
+    j = end
+    while i < j:
+        while arr[i] < pivot:
+            i += 1
+        while arr[j] > pivot:
+            j -= 1
+        if i < j:
+            arr[i], arr[j] = arr[j], arr[i]
+    return j
 
-    for item in arr:
-        if item > pivot:
-            items_greater.append(item)
-        elif item < pivot:
-            items_lower.append(item)
-        else:
-            items_equal.append(item)
-    
-    len(items_equal)
-    return quick_sort(items_lower) + items_equal + quick_sort(items_greater)
+def quick_sort(arr, start, end):
+    if start < end:
+        pivot = partition(arr, start, end)
+        quick_sort(arr, start, pivot - 1)
+        quick_sort(arr, pivot + 1, end)
 
-print(quick_sort([10, 5, 3, 6, 7, 2, 9]))
+
+def printArray(arr, n):
+    for i in range(n):
+        print(arr[i], end=" ")
+    print()
+
+arr = [10, 5, 3, 6, 7, 2, 9]
+n = len(arr)
+quick_sort(arr, 0, n - 1)
+printArray(arr, n)
