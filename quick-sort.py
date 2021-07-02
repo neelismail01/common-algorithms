@@ -1,4 +1,3 @@
-### quick sort
 def partition(arr, start, end):
     pivot = arr[(start + end) // 2]
     i = start
