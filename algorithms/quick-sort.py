@@ -1,21 +1,25 @@
-def partition(arr, start, end):
-    pivot = arr[(start + end) // 2]
-    i = start
-    j = end
-    while i < j:
-        while arr[i] < pivot:
-            i += 1
-        while j >= i and arr[j] > pivot:
-            j -= 1
-        if i < j:
-            arr[i], arr[j] = arr[j], arr[i]
-    return j
+def partition(arr, left, right):
+    pivot = arr[(left + right) // 2]
+    while left <= right:
+        while arr[left] < pivot:
+            left += 1
+        while right >= left and arr[right] > pivot:
+            right -= 1
 
-def quick_sort(arr, start, end):
-    if start < end:
-        pivot = partition(arr, start, end)
-        quick_sort(arr, start, pivot)
-        quick_sort(arr, pivot + 1, end)
+        if left <= right:
+            arr[left], arr[right] = arr[right], arr[left]
+            left += 1
+            right -= 1
+
+    return left
+
+def quick_sort(arr, left, right):
+    index = partition(arr, left, right)
+    if left < index - 1:
+        quick_sort(arr, left, index - 1)
+
+    if index < right:
+        quick_sort(arr, index, right)
 
 
 def printArray(arr, n):
