@@ -6,8 +6,7 @@
 ### }
 
 
-def breadthFirstSearch(graph, node):
-    visited = []
+def breadthFirstSearch(visited = [], graph, node):
     queue = []
 
     visited.append(node)
