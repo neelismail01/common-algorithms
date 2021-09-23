@@ -1,5 +1,5 @@
 # common-algorithms
-Implementing common sorting &amp; searching algorithms
+To improve my knowledge of computer science fundamentals, I decided to implement several common sorting and searching algorithms. A list of all the algorithms I implemented are listed below.
 
 
 Implemented Sorting Algorithms:
