@@ -6,7 +6,7 @@
 ### }
 
 
-def breadthFirstSearch(visited = [], graph, node):
+def breadthFirstSearch(graph, node, visited = []):
     queue = []
 
     visited.append(node)
@@ -20,3 +20,4 @@ def breadthFirstSearch(visited = [], graph, node):
             if neighbour not in visited:
                 visited.append(neighbour)
                 queue.append(neighbour)
+    return visited
