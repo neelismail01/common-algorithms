@@ -2,7 +2,7 @@
 To improve my knowledge of computer science fundamentals, I decided to implement several common sorting and searching algorithms. A list of all of the algorithms I implemented are listed below.
 
 
-Implemented Sorting Algorithms:
+Sorting Algorithms:
 <ul>
 <li>Quick Sort</li>
 <li>Merge Sort</li>
@@ -12,7 +12,7 @@ Implemented Sorting Algorithms:
 <li>Bubble Sort</li>
 </ul>
 
-Implemented Searching Algorithms:
+Searching Algorithms:
 <ul>
 <li>Binary Search</li>
 <li>Depth First Search</li>
